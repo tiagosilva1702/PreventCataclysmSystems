@@ -1,5 +1,0 @@
-c:\users\tiago.santos\documents\visual studio 2013\Projects\PreventCataclysmSystems\DsAdmin\obj\Debug\DsAdmin.csprojResolveAssemblyReference.cache
-c:\users\tiago.santos\documents\visual studio 2013\Projects\PreventCataclysmSystems\DsAdmin\bin\Debug\DsAdmin.dll
-c:\users\tiago.santos\documents\visual studio 2013\Projects\PreventCataclysmSystems\DsAdmin\bin\Debug\DsAdmin.pdb
-c:\users\tiago.santos\documents\visual studio 2013\Projects\PreventCataclysmSystems\DsAdmin\obj\Debug\DsAdmin.dll
-c:\users\tiago.santos\documents\visual studio 2013\Projects\PreventCataclysmSystems\DsAdmin\obj\Debug\DsAdmin.pdb
