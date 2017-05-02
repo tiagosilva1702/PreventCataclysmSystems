@@ -1,0 +1,11 @@
+*.dll
+*.pdb
+*.v12.suo
+*.cache
+*.txt
+web/packages/*
+web/DsAdmin/bin/*
+web/DsAdmin/obj/*
+web/PreventCataclysmSystems/bin/*
+web/PreventCataclysmSystems/obj/*
+.vs/
