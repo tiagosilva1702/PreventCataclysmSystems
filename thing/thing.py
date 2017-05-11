@@ -5,6 +5,7 @@ import RPi.GPIO as GPIO
 import dht11
 import time
 
+from adxl345.i2c import ADXL345
 from time import sleep
 
 GPIO.setwarnings(False)
@@ -15,6 +16,11 @@ spi = spidev.SpiDev()
 spi.open(0, 0)
 
 instance = dht11.DHT11(pin=14)
+adxl = ADXL345(port=1, alternate=True)
+deviceId = adxl.get_device_id()
+rate_hz = adxl.set_data_rate(8, 1)
+adxl.set_range(16, True)
+adxl.power_on()
 
 def getAdc(channel):	
         if channel > 7 or channel < 0:
@@ -36,13 +42,11 @@ while True:
         
 	if result.is_valid():
 		solo = getAdc(5)
-
-	        data = { "Temperatura":	 result.temperature, "Umidade": result.humidity, "Acelerometro": 0, "Solo": solo }
+		accel = adxl.get_axes()
+	        data = { "Temperatura":	 result.temperature, "Umidade": result.humidity, "Acelerometro": accel, "Solo": solo }
 	
 		print(data) 
 	
 	        postData(data)
 
 	time.sleep(1)
-
-
