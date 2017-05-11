@@ -13,13 +13,13 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/02/2017 19:01:22</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>05/10/2017 16:00:52</publishTime>
+      <publishTime>05/11/2017 17:44:23</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>05/10/2017 16:00:52</publishTime>
+      <publishTime>05/11/2017 17:44:23</publishTime>
     </File>
     <File Include="bin/DsAdmin.dll">
-      <publishTime>05/10/2017 16:00:41</publishTime>
+      <publishTime>05/11/2017 17:40:53</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>05/02/2017 19:01:32</publishTime>
@@ -28,7 +28,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/02/2017 19:01:34</publishTime>
     </File>
     <File Include="bin/PreventCataclysmSystems.dll">
-      <publishTime>05/10/2017 16:00:43</publishTime>
+      <publishTime>05/11/2017 17:44:19</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>05/02/2017 19:01:27</publishTime>
@@ -91,7 +91,7 @@ ao editar esse arquivo MSBuild. Para saber mais sobre isso, acesse http://go.mic
       <publishTime>05/02/2017 18:47:10</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/10/2017 16:00:45</publishTime>
+      <publishTime>05/11/2017 17:44:20</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>05/02/2017 18:47:08</publishTime>

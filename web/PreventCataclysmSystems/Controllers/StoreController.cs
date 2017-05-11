@@ -1,4 +1,5 @@
-﻿using PreventCataclysmSystems.Models;
+﻿using Newtonsoft.Json;
+using PreventCataclysmSystems.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,11 +15,15 @@ namespace PreventCataclysmSystems.Controllers
         // GET: api/Store
         public IEnumerable<Store> Get()
         {
-            return from value in 
+            return from value in
                        new DsAdmin.Store().Listar().Table.AsEnumerable()
                    select new Store
                    {
-                       // TOOD: set data
+                       Acelerometro = JsonConvert.DeserializeObject<Aceleracao>(value["Acelerometro"].ToString()),
+                       Solo = value["Solo"].ToInt32(),
+                       Temperatura = value["Temperatura"].ToInt32(),
+                       Umidade = value["Umidade"].ToInt32(),
+                       Leitura = value["Leitura"].ToDateTime()
                    };
         }
 
@@ -26,7 +31,7 @@ namespace PreventCataclysmSystems.Controllers
         public void Post(Store value)
         {
             //TODO: insert values in database
-            new DsAdmin.Store().Incluir(value.Acelerometro, value.Solo, value.Temperatura, value.Umidade);
+            new DsAdmin.Store().Incluir(Newtonsoft.Json.JsonConvert.SerializeObject(value.Acelerometro), value.Solo, value.Temperatura, value.Umidade);
         }
     }
 }

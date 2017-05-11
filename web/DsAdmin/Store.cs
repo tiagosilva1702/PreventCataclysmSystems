@@ -22,10 +22,10 @@ namespace DsAdmin
             neo = conexao;
         }
 
-        public void Incluir(int Acelerometro, int Solo, int Temperatura, int Umidade)
+        public void Incluir(string Acelerometro, int Solo, int Temperatura, int Umidade)
         {
             SqlCommand _Command = (SqlCommand)neo.InicializaProcedure("usp_sai_IncluirStore");
-            _Command.Parameters.AddWithValue("@Acelerometro", Acelerometro == 0 ? Convert.DBNull : Acelerometro);
+            _Command.Parameters.AddWithValue("@Acelerometro", Acelerometro == null ? Convert.DBNull : Acelerometro);
             _Command.Parameters.AddWithValue("@Solo", Solo == 0 ? Convert.DBNull : Solo);
             _Command.Parameters.AddWithValue("@Temperatura", Temperatura == 0 ? Convert.DBNull : Temperatura);
             _Command.Parameters.AddWithValue("@Umidade", Umidade == 0 ? Convert.DBNull : Umidade);
@@ -41,8 +41,17 @@ namespace DsAdmin
 
         public DataView Listar()
         {
-            //TODO: read all store
-            throw new NotImplementedException();
+            DataSet lRetorno;
+            SqlCommand _Command = (SqlCommand)neo.InicializaProcedure("usp_sai_ListarStore");
+
+            lRetorno = neo.ConsultaQueryDataSet(_Command, "Store");
+
+            if (sessaoInterna)
+            {
+                neo.Fechar();
+            }
+
+            return lRetorno.Tables["Store"].DefaultView;
         }
     }
 }
