@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Web;
 using System.Web.Mvc;
 
@@ -14,6 +15,11 @@ namespace PreventCataclysmSystems
 
     public static class Extensions
     {
+        public static string ToJson(this object o)
+        {
+            return JsonConvert.SerializeObject(o);
+        }
+
         public static int ToInt32(this object o)
         {
             try
