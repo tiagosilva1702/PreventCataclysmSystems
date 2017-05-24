@@ -17,15 +17,15 @@ namespace PreventCataclysmSystems.Controllers
 
             //TODO: group src for display
 
-            ViewBag.Display = from value in
-                                  src.GroupBy(element => element.Leitura.Value.Minute)
+            ViewBag.Leituras = (from value in
+                                  src.GroupBy(element => element.Leitura.Value.Date)
                               select new Store
                               {
-                                  Leitura = value.Average(store => store.Leitura),
+                                  Leitura = value.First().Leitura.Value.Date,
                                   Solo = value.Average(store => store.Solo).ToInt32(),
                                   Temperatura = value.Average(store => store.Temperatura).ToInt32(),
                                   Umidade = value.Average(store => store.Umidade).ToInt32()
-                              };
+                              }).ToJson();
 
             return View();
         }
