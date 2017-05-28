@@ -18,7 +18,7 @@ function drawVisualization() {
         vAxis: { title: 'Variação' },
         hAxis: { title: 'Data' },
         seriesType: 'bars',
-        series: { 5: { type: 'line' } }
+        series: { 0: { type: 'line' } }
     };
 
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
