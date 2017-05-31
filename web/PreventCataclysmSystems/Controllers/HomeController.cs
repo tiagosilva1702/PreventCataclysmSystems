@@ -35,6 +35,14 @@ namespace PreventCataclysmSystems.Controllers
                                 z = value.Acelerometro.z
                             }).ToJson();
 
+            ViewBag.Aceleracao = (from value in src
+                            select new Aceleracao
+                            {
+                                x = value.Acelerometro.x,
+                                y = value.Acelerometro.y,
+                                z = value.Acelerometro.z
+                            }).Last().ToJson();
+
             return View();
         }
 

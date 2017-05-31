@@ -1,9 +1,10 @@
-﻿google.charts.load('current', { 'packages': ['corechart', 'scatter'] });
+﻿google.charts.load('current', { 'packages': ['corechart', 'scatter', 'gauge'] });
 google.charts.setOnLoadCallback(drawVisualization);
 
 function drawVisualization() {
     drawClimateChart();
     drawAxisChart();
+    drawChart();
 }
 
 function drawClimateChart() {
@@ -33,6 +34,47 @@ function drawClimateChart() {
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }
+
+function drawChart() {
+
+    var json = $.parseJSON($('#aceleracao').val());
+
+    var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['X', json.x],
+          ['Y', json.y],
+          ['Z', json.z]
+    ]);
+
+    var options = {
+        chart: {
+            title: 'Acelerômetro - Deslocamento.',
+            subtitle: 'baseado nos eixos x, y e z'
+        },
+        width: 400, height: 120,
+        redFrom: 90, redTo: 100,
+        yellowFrom: 75, yellowTo: 90,
+        minorTicks: 5
+    };
+
+    var chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
+
+    chart.draw(data, options);
+
+    setInterval(function () {
+        data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+        chart.draw(data, options);
+    }, 13000);
+    setInterval(function () {
+        data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+        chart.draw(data, options);
+    }, 5000);
+    setInterval(function () {
+        data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+        chart.draw(data, options);
+    }, 26000);
+}
+
 
 function drawAxisChart() {
     var src = eval($('#axis').val());
@@ -110,3 +152,4 @@ function convertDate(inputFormat) {
     var d = new Date(inputFormat);
     return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('/');
 }
+
