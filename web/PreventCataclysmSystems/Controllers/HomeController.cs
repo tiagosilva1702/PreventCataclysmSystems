@@ -19,13 +19,21 @@ namespace PreventCataclysmSystems.Controllers
 
             ViewBag.Leituras = (from value in
                                   src.GroupBy(element => element.Leitura.Value.Date)
-                              select new Store
-                              {
-                                  Leitura = value.First().Leitura.Value.Date,
-                                  Solo = value.Average(store => store.Solo).ToInt32(),
-                                  Temperatura = value.Average(store => store.Temperatura).ToInt32(),
-                                  Umidade = value.Average(store => store.Umidade).ToInt32()
-                              }).ToJson();
+                                select new Store
+                                {
+                                    Leitura = value.First().Leitura.Value.Date,
+                                    Solo = value.Average(store => store.Solo).ToInt32(),
+                                    Temperatura = value.Average(store => store.Temperatura).ToInt32(),
+                                    Umidade = value.Average(store => store.Umidade).ToInt32()
+                                }).ToJson();
+
+            ViewBag.Axis = (from value in src
+                            select new Aceleracao
+                            {
+                                x = value.Acelerometro.x,
+                                y = value.Acelerometro.y,
+                                z = value.Acelerometro.z
+                            }).ToJson();
 
             return View();
         }
