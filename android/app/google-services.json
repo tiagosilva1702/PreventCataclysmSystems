@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "667294730015",
+    "firebase_url": "https://prevent-cataclysm-systems.firebaseio.com",
+    "project_id": "prevent-cataclysm-systems",
+    "storage_bucket": "prevent-cataclysm-systems.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667294730015:android:9e00354c1422db42",
+        "android_client_info": {
+          "package_name": "br.com.preventcataclysmsystems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667294730015-an9353ju44smv7i0gitnfh9ju01ahqfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.preventcataclysmsystems",
+            "certificate_hash": "e55fdc8a6f079eedc6e6d05b1702fc46949e13b8"
+          }
+        },
+        {
+          "client_id": "667294730015-t3d65c3s19duq9qmbaeajhc2cteiior8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXo4sQfDHp1nykGR3xIPvuDXO4uxE1KlQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667294730015-t3d65c3s19duq9qmbaeajhc2cteiior8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
