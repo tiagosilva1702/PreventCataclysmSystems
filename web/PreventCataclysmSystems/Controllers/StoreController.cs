@@ -26,6 +26,8 @@ namespace PreventCataclysmSystems.Controllers
         public void Post(Store value)
         {
             new DsAdmin.Store().Incluir(JsonConvert.SerializeObject(value.Acelerometro), value.Solo, value.Temperatura, value.Umidade);
+
+            new RegraNegocio.PrevencaoDeslizamento().DadosColetados(value);
         }
     }
 }
