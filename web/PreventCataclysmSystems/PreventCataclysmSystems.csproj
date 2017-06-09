@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="Models\StoreModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegraNegocio\PrevencaoDeslizamento.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
