@@ -4,7 +4,7 @@ package br.com.preventcataclysmsystems.data;
  * Created by danilo.nascimento on 09/06/2017.
  */
 
-public class Message {
+public class    Message {
     private String title;
     private String message;
     private String details;

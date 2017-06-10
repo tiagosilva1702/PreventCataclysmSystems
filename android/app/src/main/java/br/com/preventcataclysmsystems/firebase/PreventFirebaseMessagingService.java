@@ -16,6 +16,7 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -58,8 +59,9 @@ public class PreventFirebaseMessagingService extends FirebaseMessagingService {
                 .setSmallIcon(R.drawable.ic_stat_ic_notification)
                 .setColor(Color.argb(1, 5, 109, 34))
                 .setContentTitle(message.getTitle())
-                .setContentText(message.getMessage())
+                .setContentText(message.getMessage() + "\n"+ message.getDetails())
                 .setContentInfo(message.getDetails())
+                .setSubText("Warning!")
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setDefaults(Notification.DEFAULT_VIBRATE)
