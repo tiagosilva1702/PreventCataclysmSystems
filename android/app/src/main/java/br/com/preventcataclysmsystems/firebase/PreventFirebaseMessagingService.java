@@ -16,11 +16,10 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import br.com.preventcataclysmsystems.MainActivity;
+import br.com.preventcataclysmsystems.MapsActivity;
 import br.com.preventcataclysmsystems.R;
 import br.com.preventcataclysmsystems.data.Message;
 
@@ -49,7 +48,7 @@ public class PreventFirebaseMessagingService extends FirebaseMessagingService {
     private void sendNotificationMessage(Message message) {
         int random = new Random().nextInt();
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MapsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);

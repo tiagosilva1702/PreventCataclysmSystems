@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "667294730015-96q8c18cmip5tevohpcis8nanl59f4p8.apps.googleusercontent.com",
+          "client_id": "667294730015-d5ckun7nm6fvp0ce2h1u59qagspcc6tg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "br.com.preventcataclysmsystems",
-            "certificate_hash": "496d335da235f4e6992f40608bca660ea6be467e"
+            "certificate_hash": "e55fdc8a6f079eedc6e6d05b1702fc46949e13b8"
           }
         },
         {

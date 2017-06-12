@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'prevent-cataclysm-systems'
             keyPassword 'k4d1l4k!'
-            storeFile file('C:/Users/Danilo/Documents/GitHub/PreventCataclysmSystems/android/prevent-cataclysm-systems.jks')
+            storeFile file('C:/Users/id4ni10/Documents/GitHub/PreventCataclysmSystems/android/prevent-cataclysm-systems.jks')
             storePassword 'k4d1l4k!'
         }
     }
