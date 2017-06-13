@@ -1,5 +1,7 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +12,12 @@
     <meta property="og:description" content="Sistema de prevenção de catalcismos.">
     <meta property="og:image" content="https://homologacao.imap.org.br/prevent/logo.png">
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    @*<meta http-equiv="refresh" content="5">*@
+    <meta property="og:locale" content="pt_BR" /> @*
+    <meta http-equiv="refresh" content="5">*@
     <title>@ViewBag.Title - Prevent Cataclysm Systems</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css") @Scripts.Render("~/bundles/modernizr")
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -24,8 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Prevent Cataclysm Systems", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </button> @Html.ActionLink("Prevent Cataclysm Systems", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -41,11 +42,14 @@
         <hr />
         <footer class="text-muted text-center">
             <p>&copy; @DateTime.Now.Year - Prevent Cataclysm Systems</p>
+            <p>Baixe o nosso app para Android&trade;</p>
+            <a target="_blank" href='https://play.google.com/store/apps/details?id=br.com.preventcataclysmsystems&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img alt='Baixe nosso app para Android!;' src='~/images/google-play-badge.png' style="width:120px" />
+            </a>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery") @Scripts.Render("~/bundles/bootstrap") @RenderSection("scripts", required: false)
 </body>
+
 </html>
